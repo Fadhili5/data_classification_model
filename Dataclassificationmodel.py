@@ -26,7 +26,7 @@ accuracy = accuracy_score(y_test, y_pred)
 print('Accuracy: {:.2f}'.format(accuracy))
 
 #Visualize classification results using simple plot
-#Reduce data to  2 components for easy visualization using PCA
+#Reduce data to 2 components for easy visualization using PCA
 pca = PCA(n_components=2)
 X_pca = pca.fit_transform(X)
 
@@ -43,7 +43,7 @@ plt.legend()
 plt.title('The Iris Dataset PCA')
 plt.show()
 
-#Test model using sample data points
+#Test model using the sample data points
 sample_data = np.array([7.0, 3.2, 4.7, 1.4])
 predicted_class = model.predict(sample_data.reshape(1,-1))
 predicted_species = iris.target_names[predicted_class][0]
